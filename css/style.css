@@ -1,0 +1,214 @@
+@charset "UTF-8"; /* Declaração de codificação UTF-8 */
+
+/* Fontes */
+@font-face {
+  font-family: "idroid";
+  src: url("../fontes/idroid.woff2") format("woff2"),
+    url("../fontes/idroid.woff") format("woff"),
+    url("../fontes/idroid.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+
+header > h1 {
+  font-family: "Orbitron", sans-serif; /* Adicione 'sans-serif' como fallback */
+  text-align: center;
+  font-size: 2em;
+  color: #ffffff;
+}
+
+/* Color Theme Swatches in Hex */
+:root {
+  --cor0: #3d5a73;
+  --cor1: #2f3d40;
+  --cor2: #455559;
+  --cor3: #28403d;
+  --cor4: #182625;
+  --cor5: #86d5d0;
+  --cor6: #037022;
+
+  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+  --fonte-destaque: "Jura", cursive;
+  --fonte-androide: "idroid", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  background-color: var(--cor0);
+  font-family: var(--fonte-padrao);
+}
+
+a.externo::after {
+  content: "\1F517";
+}
+a {
+  text-decoration: none;
+  color: #037022;
+}
+/* Tipografia */
+p {
+  text-indent: 30px;
+  text-align: justify;
+  margin: 15px 0px;
+  line-height: 1.5em;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(to bottom, var(--cor0), var(--cor4));
+  padding: 10px;
+}
+
+header > h1 {
+  font-family: "Jura";
+  text-align: center;
+  font-size: 2em;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px #00000073;
+}
+
+header > p {
+  text-align: center;
+  font-size: 1em;
+  color: #ffffff;
+  width: 80%;
+  padding: 15px;
+  margin: 0 auto;
+  text-shadow: 2px 2px 2px #00000054;
+}
+
+nav {
+  padding: 2px;
+}
+
+nav > a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  padding: 5px;
+  transition-duration: 1s;
+}
+
+nav > a:hover {
+  background-color: var(--cor0);
+  border-radius: 5px;
+  /*teste*/
+}
+
+/* Conteúdo principal */
+main {
+  background-color: #ffffff;
+  min-width: 300px;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+main h1 {
+  font-family: "idroid";
+  font-size: 1.8em;
+  font-weight: normal;
+  color: var(--cor6);
+}
+
+main h2 {
+  font-family: "idroid";
+  font-size: 1.5em;
+  font-weight: normal;
+  color: var(--cor6);
+  background: linear-gradient(to right, var(--cor5), transparent);
+}
+
+main strong {
+  color: var(--cor6);
+  font-weight: bold;
+}
+
+/* Vídeo responsivo */
+.video {
+  position: relative;
+  background-color: var(--cor4);
+  margin: 5px -10px -0px -10px; /* Remove efeito do padding */
+  padding: 20px;
+  padding-bottom: 50%;
+}
+
+.video > iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+/* Barra lateral */
+aside {
+  background-color: var(--cor5);
+  width: 95%;
+  margin: 10px auto 10px auto;
+  border-radius: 10px;
+  padding: 10px;
+  /* box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); */
+}
+
+aside > h3 {
+  height: 40px;
+  background-color: var(--cor3);
+  color: white;
+  border-radius: 10px 10px 0 0;
+  margin: -10px -10px 0px -10px; /* Remove efeito do padding */
+  padding: 5px;
+}
+
+aside > p {
+  text-align: justify;
+  margin: 10px;
+}
+aside > p > a {
+  text-decoration: none;
+  color: var(--cor4);
+}
+
+aside ul {
+  list-style-position: inside;
+  list-style-type: "\2714\00A0\00A0"; /* 2714 icone os caracteres a frente são espaços entre ele e os itens da lista*/
+}
+
+/* Listas */
+.listas {
+  display: flexbox;
+  flex-direction: row;
+  column-count: 2; /* Define duas colunas */
+  column-gap: 20px; /* Espaço entre colunas */
+  column-fill: balance; /* Distribui o conteúdo de forma equilibrada */
+  margin: 0 0 0 25px;
+}
+
+.listas > ul > li > a {
+  color: #000000;
+}
+
+/* Rodapé */
+footer {
+  width: 100%;
+  background-color: var(--cor3);
+}
+
+footer > p {
+  text-align: center;
+  font-size: 1em;
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 10px;
+}
